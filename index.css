@@ -69,7 +69,8 @@ button {
   position: relative;
   max-width: 1500px;
   width: 100%;
-  height: auto; /* Optional: Use auto for responsive height or set a percentage */
+  top: 95px;
+  height: calc(100vh - 95px); /* Optional: Use auto for responsive height or set a percentage */
   background: #fcf8f8;
   overflow-x: hidden;
   display: flex;
@@ -82,7 +83,6 @@ button {
   width: 100%;
   height: 95px;
   z-index: 137;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,11 +100,11 @@ button {
   position: relative;
   width: 100%;
   height: 95px;
-  margin: 2px 0 0 0;
-  padding: 28px 36px 28px 36px;
+  margin: 0 auto;
+  padding: 10px 36px;
   background: #fcf8f8;
   z-index: 138;
-  max-width: 1500px;
+  max-width: 1200px;
 }
 
 .logo-fons-transparent {
@@ -116,17 +116,6 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 140;
-}
-
-/* Navbar container */
-.nav-bar-1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  padding: 10px 36px;
-  background: #fcf8f8;
 }
 
 /* Center & evenly space nav links */
@@ -208,7 +197,6 @@ button {
 }
 
 .headline {
-  margin-top: 95px; 
   display: flex;
   text-align: center;
   flex-direction: column;
