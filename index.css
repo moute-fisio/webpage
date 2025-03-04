@@ -124,6 +124,7 @@ button {
   justify-content: center;
   gap: 30px; /* Adjust spacing */
   flex-grow: 1; /* Helps center links */
+  align-items: center; 
 }
 
 /* General styling for all links */
@@ -144,21 +145,27 @@ button {
 .dropdown {
   position: relative;
   z-index: 9999; 
+  display: flex; 
+  align-items: center;
 }
 
 .dropdown-toggle {
   cursor: pointer;
+  display: inline-block;
+  padding: 10px; 
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 90%;
   left: 0;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px 10px;
   z-index: 9999; 
+  min-width: 200px;
+  list-style: none; /* Removes bullet points */
 }
 
 .dropdown-menu li {
@@ -167,13 +174,16 @@ button {
 
 .dropdown-menu li a {
   color: #337ab7;
+  display: block; 
+  padding: 5px 10px;
 }
 
 .dropdown-menu li a:hover {
   color: #23527c;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
 }
 
@@ -675,7 +685,7 @@ button:hover {
   gap: 80px;
   position: relative;
   width: 100%;
-  margin: 81px 0 0 1px;
+  margin: 0 0 0 1px;
   padding:  40px 40px;
   z-index: 87;
   position: relative;
@@ -691,7 +701,6 @@ button:hover {
   margin-bottom: -30px; 
   padding-top: 0px; 
   padding-bottom: 0px; 
-  text-align: justify;
 }
 
 .qui-som h2{

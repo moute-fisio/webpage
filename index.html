@@ -11,7 +11,9 @@
   <body>
     <div class="nav-bar">
       <div class="nav-bar-1">
-        <div class="logo-fons-transparent"></div>
+        <a href="index.html">
+          <div class="logo-fons-transparent"></div>
+        </a>
         <div class="nav-links">
           <a href="index.html" class="nav-link">INICI</a>
           <div class="nav-link dropdown">
@@ -27,9 +29,9 @@
           </div>
           <a href="sobre-moute.html" class="nav-link">SOBRE MOU-TE</a>
           <a href="ofertes.html" class="nav-link">OFERTES</a>
-          <a onclick="location.href='#opinions'" class="nav-link">OPINIONS</a>
+          <a onclick="location.href='index.html#opinions'" class="nav-link">OPINIONS</a>
         </div>
-        <a onclick="location.href='#contacte'" class="boto boto-contacte">CONTACTE</a>
+        <a onclick="location.href='index.html#contacte'" class="boto boto-contacte">CONTACTE</a>
       </div>
     </div>
     <div class="main-container">
@@ -193,5 +195,35 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let dropdown = document.querySelector(".dropdown");
+          let dropdownMenu = document.querySelector(".dropdown-menu");
+          let timeout;
+
+          dropdown.addEventListener("mouseenter", function () {
+              clearTimeout(timeout); // Prevent it from hiding too soon
+              dropdownMenu.style.display = "block";
+          });
+
+          dropdown.addEventListener("mouseleave", function () {
+              timeout = setTimeout(() => {
+                  if (!dropdownMenu.matches(":hover")) {
+                      dropdownMenu.style.display = "none";
+                  }
+              }, 300); // Adds a delay to prevent flickering
+          });
+
+          dropdownMenu.addEventListener("mouseenter", function () {
+              clearTimeout(timeout); // Keep it open when hovering over the menu
+          });
+
+          dropdownMenu.addEventListener("mouseleave", function () {
+              timeout = setTimeout(() => {
+                  dropdownMenu.style.display = "none";
+              }, 300);
+          });
+      });
+    </script>
   </body>
 </html>
