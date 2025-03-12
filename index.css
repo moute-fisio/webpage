@@ -5,47 +5,172 @@
     "Source Han Sans CN", sans-serif;
 }
 
-/* Make elements responsive */
-@media (max-width: 768px) {
-  .main-container {
-    width: 95%;
-  }
-  
-  .headline {
-    padding: 10px;
-  }
+.menu-toggle {
+  display:none;
+}
 
-  .serveis {
-    flex-direction: column;
-    padding: 10px;
-  }
-
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
   .nav-bar-1 {
     flex-direction: column;
-    gap: 10px; 
+    padding: 1rem;  
+    position: relative;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .boto-contacte {
-    margin-left: 0;
-  }
-
-  .contact-section {
+    width: 100%; 
     flex-direction: column;
+    text-align: center;
+    position: absolute; 
+    top: 100%;  
+    left: 0; 
+    background: white; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links:not(.active) {
+    display: none; 
+  }
+
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block; 
+    position: absolute; 
+    right: 1rem; 
+    background: none;
+    border: none; 
+    font-size: 1.5rem;
+    cursor: pointer; 
+    z-index: 1001; 
+  }
+
+  .menu-toggle:focus {
+    outline: none; 
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+}
+
+
+/*Responsive layout*/
+@media screen and (max-width: 768px) {
+
+  .main-container {
+    padding: 1rem; 
+    overflow-x: hidden; 
+  }
+  
+  .headline {
+    position: relative;
+    z-index: 2;
+    height: 600px; /* Ensures it has enough space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .headline-title {
+    font-size: 25px !important; 
+    line-height: 24px;
+  }
+
+  .headline-text {
+    font-size: 15px !important; 
+    line-height: 15px;
+    margin: 0;
+  }
+
+  .foto-headline {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+  }
+
+  .boto-contacte{
+    display: none !important; 
+  }
+
+  .text-serveis{
+    padding: 1rem; 
+  }
+
+  .footer .row{
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  .footer .col-md-3{
+    margin-bottom: 2rem; 
+  }
+}
+
+/*General responsive improvements*/
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .serveis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    padding: 200px 27px 56px 27px !important;
+  }
+
+  .serveis-title {
+    margin-top: 1000px; 
+    font-size: 24px;
     text-align: center;
   }
 
-  .input-group {
+  .serveis-grid {
+    display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
-  .ioga-pilates {
-    flex-direction: column;
-    text-align: center;
+  .serveis-item {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  .serveis-item img {
+    height: auto;
+  }
+
+  .serveis-item .overlay {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .serveis-item:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -203,6 +328,7 @@ button {
 }
 
 .boto-contacte {
+  display: block; 
   margin-left: auto; 
 }
 
@@ -218,7 +344,8 @@ button {
   position: relative;
   width: 100%;
   height: 663px;
-  padding: 64px 230px 64px 230px;
+  padding: 0px 230px 64px 230px;
+  margin-bottom: 100px; 
 }
 
 .foto-headline {
@@ -291,7 +418,6 @@ body.exercici-terapeutic .foto-headline{
   justify-content: center;
   text-align: center; 
   flex-shrink: 0;
-  gap: 80px;
   position: relative;
   width: 100%;
   z-index: 2;
@@ -310,7 +436,7 @@ body.exercici-terapeutic .foto-headline{
   line-height: 52px;
   text-align: center;
   z-index: 3;
-  margin: 0 auto; 
+  margin: 0 5px 10px 10px; 
   color: #ffffff;
 }
 
@@ -323,7 +449,7 @@ body.exercici-terapeutic .foto-headline{
   line-height: 28px;
   text-align: center;
   z-index: 4;
-  margin: 0 100px auto 50px; 
+  margin: 0 5px 10px 10px; 
   color: #ffffff;
 }
 
@@ -346,8 +472,8 @@ body.exercici-terapeutic .foto-headline{
   position: relative;
   width: 100%;
   height: 978px;
-  margin: 8px 0 0 0;
-  padding: 56px 27px 56px 27px;
+  margin: 80px 0 0 0;
+  padding: 150px 27px 56px 27px;
   background: #f4f0ef;
   z-index: 72;
   justify-content: center;

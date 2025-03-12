@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mou-te fisioteràpia</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="index.css" />
   </head>
   <body class="fisioterapia-esportiva">
@@ -63,8 +64,10 @@
                 <div class="col-md-3">
                     <h4>Xarxes socials</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Whatsapp</a></li>
+                      <p><i class="fab fa-instagram"></i> 
+                        <a href="https://www.instagram.com/moute_fisioterapia/" target="_blank">@moute_fisioterapia</a>
+                      </p>
+                      <p><i class="fas fa-phone"></i> 602 612 940</p>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -79,6 +82,19 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.innerHTML = '☰';
+        document.querySelector('.nav-bar-1').appendChild(menuToggle);
+
+        menuToggle.addEventListener('click', function () {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('active');
+        });
+      }); 
+    </script>
   </body>
 </html>
   
