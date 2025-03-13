@@ -128,44 +128,49 @@
       </div>
       <a id="contacte"></a>
       <section class="contact-section">
-        <!-- Left: Location -->
-        <div class="location">
-            <h2>On som</h2>
-            <p>Troba'ns fàcilment a Reus! Aquí tens un mapa per veure la nostra ubicació. Clica per obrir a Google Maps i vine a visitar-nos!</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.0731447063918!2d1.1015927762359647!3d41.15699157133008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a15102577288f5%3A0xfdd70a4b44c068db!2sCarrer%20de%20Sant%20Elies%2C%2034%2C%2043201%20Reus%2C%20Tarragona!5e1!3m2!1ses!2ses!4v1737572966597!5m2!1ses!2ses" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+        <div class="row">
+           <!-- Left: Location -->
+           <div class="location">
+              <div class="col-lg-6 col-md-12">
+                <h2>On som</h2>
+                <p>Troba'ns fàcilment a Reus! Aquí tens un mapa per veure la nostra ubicació. Clica per obrir a Google Maps i vine a visitar-nos!</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.0731447063918!2d1.1015927762359647!3d41.15699157133008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a15102577288f5%3A0xfdd70a4b44c068db!2sCarrer%20de%20Sant%20Elies%2C%2034%2C%2043201%20Reus%2C%20Tarragona!5e1!3m2!1ses!2ses!4v1737572966597!5m2!1ses!2ses" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          <!-- Right: Contact Form -->
+          <div class="contact-form">
+            <div class="col-lg-6 col-md-12">
+              <h2>Formulari de contacte</h2>
+              <p>Tens alguna pregunta o vols saber més sobre el que fem? Omple el formulari de contacte i ens posarem en contacte amb tu tan aviat com poguem.</p>
+              <form action="https://formsubmit.co/bego.vigi@gmail.com" method="POST" class="contact-form-content">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="name" name="name" placeholder="Andreu" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="cognoms">Cognoms:</label>
+                        <input type="text" id="surname" name="surname" placeholder="Rodriguez Puig" required>
+                    </div>
+                </div>
+            
+                <div class="input-box">
+                  <label for="telèfon">Telèfon:</label>
+                  <input type="tel" id="phone" name="phone" placeholder="666666666">
+                </div>
+                
+                <div class="input-box">
+                  <label for="missatge">Motiu consulta:</label>
+                  <textarea id="message" name="message" placeholder="El motiu de la meva consulta és..." rows="3" required></textarea>
+                </div>
 
-        <!-- Right: Contact Form -->
-        <div class="contact-form">
-            <h2>Formulari de contacte</h2>
-            <p>Tens alguna pregunta o vols saber més sobre el que fem? Omple el formulari de contacte i ens posarem en contacte amb tu tan aviat com poguem.</p>
-            <form action="https://formsubmit.co/bego.vigi@gmail.com" method="POST" class="contact-form-content">
-              <div class="input-group">
-                  <div class="input-box">
-                      <label for="nom">Nom:</label>
-                      <input type="text" id="name" name="name" placeholder="Andreu" required>
-                  </div>
-                  <div class="input-box">
-                      <label for="cognoms">Cognoms:</label>
-                      <input type="text" id="surname" name="surname" placeholder="Rodriguez Puig" required>
-                  </div>
-              </div>
-          
-              <div class="input-box">
-                <label for="telèfon">Telèfon:</label>
-                <input type="tel" id="phone" name="phone" placeholder="666666666">
-              </div>
-              
-              <div class="input-box">
-                <label for="missatge">Motiu consulta:</label>
-                <textarea id="message" name="message" placeholder="El motiu de la meva consulta és..." rows="3" required></textarea>
-              </div>
-
-              <button type="submit">Enviar</button>
-            </form>
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
           </div>
+        </div> 
       </section> 
       <div class="footer">
         <div class="footer-top">
