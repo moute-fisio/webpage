@@ -65,7 +65,6 @@
 
 }
 
-
 /*Responsive layout*/
 @media screen and (max-width: 768px) {
 
@@ -78,30 +77,68 @@
   .headline {
     position: relative;
     z-index: 2;
-    height: 600px; /* Ensures it has enough space */
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    margin-bottom: 20px; 
-    clear: both; 
-  }
-
-  .headline-title {
-    font-size: 25px !important; 
-    line-height: 24px;
-  }
-
-  .headline-text {
-    font-size: 15px !important; 
-    line-height: 15px;
+    justify-content: center;
     margin: 0;
   }
 
   .foto-headline {
     width: 100%; 
-    height: 300px; 
-    object-fit: cover; 
+    height: 500px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headline-title {
+    font-size: 25px !important; 
+    line-height: 30px;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .headline-text {
+    font-size: 16px !important; 
+    line-height: 22px;
+    padding: 0 20px;
+    width: 90%;
+  }
+
+  .serveis {
+    padding: 40px 15px;
+    margin: 0;
+    gap: 40px;
+  }
+
+  .serveis-title {
+    width: auto;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+  }
+
+  .serveis-grid {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .serveis-item {
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+  }
+
+  body.fisioterapia .foto-headline,
+  body.ioga-pilates .foto-headline,
+  body.fisioterapia-esportiva .foto-headline,
+  body.salut-gent-gran .foto-headline,
+  body.sol-pelvia .foto-headline,
+  body.exercici-terapeutic .foto-headline {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
   }
 
   .boto-contacte{
@@ -250,7 +287,8 @@ button {
   max-width: 1500px;
   width: 100%;
   top: 95px;
-  height: calc(100vh - 95px); /* Optional: Use auto for responsive height or set a percentage */
+  min-height: calc(100vh - 95px);
+  height: auto;
   background: #fcf8f8;
   overflow-x: hidden;
   display: flex;
@@ -392,29 +430,27 @@ button {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center; 
   flex-wrap: nowrap;
   gap: 12px;
   position: relative;
   width: 100%;
-  height: 663px;
-  padding: 0px 230px 64px 230px;
-  margin-bottom: 100px; 
+  height: 700px;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
 }
 
 .foto-headline {
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 800px;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/cd93584e-26ec-4c55-b31b-d18645aa85ab.png)
-    no-repeat center;
+  height: 700px;
+  background: url(./assets/images/cd93584e-26ec-4c55-b31b-d18645aa85ab.png) no-repeat center;
   background-size: cover;
-  z-index: 1;
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -471,28 +507,28 @@ body.exercici-terapeutic .foto-headline{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center; 
-  flex-shrink: 0;
-  position: relative;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   z-index: 2;
-  margin: 0 auto; 
 }
 
 .headline-title {
-  align-self: stretch;
   flex-shrink: 0;
   position: relative;
   min-width: 0;
-  height: 150px;
+  height: auto;
   font-family: Poppins, var(--default-font-family);
   font-size: 45px;
   font-weight: 600;
   line-height: 52px;
   text-align: center;
-  z-index: 3;
-  margin: 0 5px 10px 10px; 
+  margin: 0;
   color: #ffffff;
+  padding: 20px;
 }
 
 .headline-text {
@@ -508,161 +544,30 @@ body.exercici-terapeutic .foto-headline{
   color: #ffffff;
 }
 
-.whatsapp {
-  position: relative;
-  width: 78px;
-  height: 79px;
-  margin: -7px 0 0 1185px;
-  background: url(./assets/images/5db4f07c-7d10-47b9-9bb1-a62067f47567.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 136;
-}
-.serveis {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 80px;
-  position: relative;
-  width: 100%;
-  margin: 80px 0 0 0;
-  padding: 150px 27px 56px 27px;
-  background: #f4f0ef;
-  z-index: 72;
-  justify-content: center;
-  overflow: auto; 
-  min-height: 100vh; 
-}
-
-.serveis-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  flex-basis: auto;
-  position: relative;
-  width: 146px;
-  height: 36px;
-  color: #000b21;
-  font-family: Poppins, var(--default-font-family);
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 36px;
-  text-align: center;
-  white-space: nowrap;
-  z-index: 73;
-}
-
-.serveis-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  max-width: 1217px;
-}
-
-.serveis-item {
-  position: relative;
-  width: 375px;
-  height: 330px;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  overflow: hidden;
-}
-
-.serveis-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.serveis-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 31, 61, 0.6); /* Dark semi-transparent overlay */
-  font-family: Raleway, var(--default-font-family);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.serveis-item h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.serveis-item p {
-  font-size: 14px;
-  margin: 0 20px; 
-  font-weight: 50; 
-}
-
-.serveis-item:hover img {
-  transform: scale(1.1); /* Slight zoom effect */
-}
-
-.serveis-item:hover .overlay {
-  opacity: 1;
-}
-
-.testimonis {
+.text-serveis { 
   display: flex;
   flex-direction: column; 
   align-items: center;
-  justify-content: center;
   position: relative;
   width: 100%;
-  height: 84px;
-  margin: 50px 0 0 0;
-  padding: 80px 80px 80px 80px;
-  color: #0a1f3d;
-  font-family: Poppins, var(--default-font-family);
-  font-size: 22px;
-  font-weight: 500;
-  text-align: center;
-  z-index: 92;
-  flex-wrap: nowrap;
-}
-
-.text-serveis {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  min-height: 200px; 
-  margin: 100px 0 0 0;
-  padding: 80px 80px;
+  height: auto;
+  margin: 0;
+  padding: 80px 20px 80px 20px;
   color: #0a1f3d;
   font-family: Raleway, var(--default-font-family);
   font-size: 22px;
   font-weight: 500;
   text-align: center;
-  z-index: 92;
-  flex-wrap: nowrap;
   background: #f4f0ef;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
-.text-serveis p{
+.text-serveis p {
   padding-top: 10px; 
-  width: 85%; 
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
 }
 
 .ofertes {
@@ -909,22 +814,29 @@ button:hover {
   font-size: 19px;
 }
 
-.paragraf-fisio{
+.paragraf-fisio {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 90%;
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 40px 80px 40px;
+  gap: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.imatge-fisio{
-  width: 30%; 
-  margin-right: 20px; 
+.imatge-fisio {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-fisio{
-  width: 70%;
+.text-fisio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-fisio h3{
@@ -951,4 +863,363 @@ body.sobre-moute .on-som h2{
   color: #006D33; 
   margin-bottom: 10px; 
   font-size: 33px; 
+}
+
+.serveis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0px 27px 56px 27px;
+  background: #f4f0ef;
+  z-index: 72;
+  justify-content: center;
+  overflow: auto; 
+  min-height: 100vh; 
+}
+
+.serveis-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 146px;
+  height: 36px;
+  color: #000b21;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 73;
+}
+
+.serveis-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1217px;
+}
+
+.serveis-item {
+  position: relative;
+  width: 375px;
+  height: 330px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.serveis-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.serveis-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 31, 61, 0.6);
+  font-family: Raleway, var(--default-font-family);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.serveis-item h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.serveis-item p {
+  font-size: 14px;
+  margin: 0 20px; 
+  font-weight: 50; 
+}
+
+.serveis-item:hover img {
+  transform: scale(1.1);
+}
+
+.serveis-item:hover .overlay {
+  opacity: 1;
+}
+
+.testimonis {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 84px;
+  margin: 50px 0 0 0;
+  padding: 80px 80px 80px 80px;
+  color: #0a1f3d;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  z-index: 92;
+  flex-wrap: nowrap;
+}
+
+.whatsapp {
+  position: relative;
+  width: 78px;
+  height: 79px;
+  margin: -7px 0 0 1185px;
+  background: url(./assets/images/5db4f07c-7d10-47b9-9bb1-a62067f47567.png) no-repeat center;
+  background-size: cover;
+  z-index: 136;
+}
+
+/* Tablet and small desktop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .headline {
+    height: 600px;
+  }
+
+  .foto-headline {
+    height: 600px;
+  }
+
+  .serveis {
+    margin: 0;
+    padding: 60px 20px;
+  }
+
+  .serveis-grid {
+    gap: 30px;
+  }
+
+  .serveis-item {
+    width: 320px;
+    height: 300px;
+  }
+
+  body.fisioterapia .foto-headline,
+  body.ioga-pilates .foto-headline,
+  body.fisioterapia-esportiva .foto-headline,
+  body.salut-gent-gran .foto-headline,
+  body.sol-pelvia .foto-headline,
+  body.exercici-terapeutic .foto-headline {
+    height: 600px;
+  }
+}
+
+/* Ensure proper transitions between screen sizes */
+@media screen and (min-width: 1025px) {
+  .headline {
+    height: 700px;
+  }
+
+  .foto-headline {
+    height: 700px;
+  }
+
+  .serveis {
+    margin: 0;
+    padding: 80px 27px 56px 27px;
+  }
+
+  body.fisioterapia .foto-headline,
+  body.ioga-pilates .foto-headline,
+  body.fisioterapia-esportiva .foto-headline,
+  body.salut-gent-gran .foto-headline,
+  body.sol-pelvia .foto-headline,
+  body.exercici-terapeutic .foto-headline {
+    height: 700px;
+  }
+}
+
+/* Sobre Mou-te page responsive styles */
+@media screen and (max-width: 768px) {
+  .qui-som {
+    padding: 120px 20px 40px 20px;
+    text-align: center;
+  }
+
+  .qui-som h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .qui-som p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .fotos-qui-som {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .fotos-qui-som .imatge-circular {
+    width: 140px;
+    height: 140px;
+  }
+
+  .fisios {
+    padding: 40px 20px;
+  }
+
+  .paragraf-fisio {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px 40px 20px;
+    text-align: center;
+  }
+
+  .imatge-fisio {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .imatge-fisio .imatge-circular {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .text-fisio {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text-fisio h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .text-fisio p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Tablet and small desktop */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .qui-som {
+    padding: 140px 40px 60px 40px;
+  }
+
+  .fotos-qui-som {
+    gap: 30px;
+  }
+
+  .fotos-qui-som .imatge-circular {
+    width: 180px;
+    height: 180px;
+  }
+
+  .paragraf-fisio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 30px 60px 30px;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .imatge-fisio {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-fisio {
+    width: 85%;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+
+/* Tablet and iPad specific styles */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .qui-som {
+    padding: 140px 40px 60px 40px;
+  }
+
+  .fotos-qui-som {
+    gap: 30px;
+  }
+
+  .fotos-qui-som .imatge-circular {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Fisios section tablet layout */
+  .fisios {
+    padding: 60px 30px;
+  }
+
+  .paragraf-fisio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 30px 60px 30px;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .imatge-fisio {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imatge-fisio .imatge-circular {
+    width: 280px;
+    height: 280px;
+    margin: 0;
+  }
+
+  .text-fisio {
+    width: 85%;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .text-fisio h3 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+
+  .text-fisio p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+  }
 }
