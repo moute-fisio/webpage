@@ -837,10 +837,10 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #0a1f3d;
 }
 
 .text-fisio h3{
-  color: #0a1f3d;
   margin-bottom: 10px; 
 }
 
@@ -857,6 +857,7 @@ body.sobre-moute .on-som{
   justify-content: center; 
   display: flex;
   flex-direction: column;
+  color: #0a1f3d;
 }
 
 body.sobre-moute .on-som h2{
@@ -997,6 +998,46 @@ body.sobre-moute .on-som h2{
   z-index: 136;
 }
 
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+}
+
+.whatsapp-float i {
+  margin-top: 2px;
+}
+
+/* Tablet and mobile adjustments */
+@media screen and (max-width: 1024px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+}
+
 /* Tablet and small desktop */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .headline {
@@ -1124,7 +1165,7 @@ body.sobre-moute .on-som h2{
   }
 }
 
-/* Tablet and small desktop */
+/* Tablet and mobile adjustments */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .qui-som {
     padding: 140px 40px 60px 40px;
