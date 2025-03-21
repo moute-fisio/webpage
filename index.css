@@ -1264,3 +1264,27 @@ body.sobre-moute .on-som h2{
     margin: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer-top .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-top .col-md-3 {
+    text-align: center;
+    position: static;
+    left: 0;
+    margin: 20px 0;
+  }
+
+  .footer-top .col-md-3:last-child {
+    position: static;
+    left: 0;
+    width: auto;
+  }
+
+  .footer-top img {
+    margin: 0 auto;
+  }
+}
