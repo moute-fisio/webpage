@@ -581,7 +581,7 @@ body.exercici-terapeutic .foto-headline{
   width: 100%;
   height: 424px;
   margin: 81px 0 0 1px;
-  padding: 80px 80px 80px 80px;
+  padding: 60px;
   background: #f4f0ef;
   z-index: 87;
   position: relative;
@@ -592,9 +592,10 @@ body.exercici-terapeutic .foto-headline{
   color: #0a1f3d;
 }
 
-.button-ofertes{
-  padding: 20px 40px; 
-  font-size: 18px; 
+@media screen and (max-width: 768px) {
+  .ofertes {
+    padding: 40px 30px;
+  }
 }
 
 .contact-section {
@@ -978,7 +979,7 @@ body.sobre-moute .on-som h2{
   width: 100%;
   height: 84px;
   margin: 50px 0 0 0;
-  padding: 80px 80px 80px 80px;
+  padding: 60px;
   color: #0a1f3d;
   font-family: Poppins, var(--default-font-family);
   font-size: 22px;
@@ -986,6 +987,13 @@ body.sobre-moute .on-som h2{
   text-align: center;
   z-index: 92;
   flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonis {
+    padding: 40px 30px;
+  }
 }
 
 .whatsapp {
