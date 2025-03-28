@@ -235,7 +235,6 @@
   }
 
   .serveis-title {
-    margin-top: 1000px; 
     font-size: 24px;
     text-align: center;
   }
@@ -592,9 +591,47 @@ body.exercici-terapeutic .foto-headline{
   color: #0a1f3d;
 }
 
+.ofertes-images {
+  text-align: center;
+  margin-top: 20px;
+  background: #f4f0ef;
+  width: 100%; 
+  padding-top: 40px; 
+  padding-bottom: 40px; 
+}
+
+.ofertes-title {
+  font-family: Raleway, var(--default-font-family);
+  color: #006D33;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.ofertes-title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
-  .ofertes {
-    padding: 40px 30px;
+  .ofertes-title h2 {
+    font-size: 2rem;
+  }
+}
+
+.ofertes-images img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .ofertes-images img {
+    width: 90%;
+    margin: 0 5px;
   }
 }
 
@@ -977,7 +1014,7 @@ body.sobre-moute .on-som h2{
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 84px;
+  height: 100%;
   margin: 50px 0 0 0;
   padding: 60px;
   color: #0a1f3d;
@@ -987,7 +1024,7 @@ body.sobre-moute .on-som h2{
   text-align: center;
   z-index: 92;
   flex-wrap: nowrap;
-  background-color: #ffffff;
+  background-color: #FCF8F8;
 }
 
 @media screen and (max-width: 768px) {
@@ -1295,4 +1332,15 @@ body.sobre-moute .on-som h2{
   .footer-top img {
     margin: 0 auto;
   }
+
+  .ofertes-images {
+    flex-direction: column; /* Stack images */
+    align-items: center; /* Center images */
+  }
+
+  .ofertes-images img {
+    width: 90%; /* Make images responsive */
+    max-width: 300px; /* Limit maximum width */
+  }
+ 
 }
