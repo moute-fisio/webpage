@@ -1344,3 +1344,12 @@ body.sobre-moute .on-som h2{
   }
  
 }
+
+.ofertes-validesa {
+  font-family: Raleway, var(--default-font-family);
+  text-align: center;
+  margin-top: 20px;
+  color: #0a1f3d;
+  font-size: 18px;
+  font-weight: 500;
+}
