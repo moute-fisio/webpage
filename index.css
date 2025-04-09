@@ -111,6 +111,10 @@
     padding: 40px 15px;
     margin: 0;
     gap: 40px;
+    margin-top: 40px;
+    z-index: 1;
+    background: white;
+    position: relative;
   }
 
   .serveis-title {
@@ -232,6 +236,9 @@
     padding: 200px 27px 56px 27px !important;
     overflow: auto; 
     min-height: 100vh; 
+    z-index: 1;
+    background: white;
+    position: relative;
   }
 
   .serveis-title {
@@ -805,7 +812,7 @@ button:hover {
   position: relative;
   width: 100%;
   margin: 0 0 0 1px;
-  padding:  40px 40px;
+  padding:  40px 40px 100px; 
   z-index: 87;
   position: relative;
   font-size: 22px;
@@ -880,6 +887,11 @@ button:hover {
 
 .text-fisio h3{
   margin-bottom: 10px; 
+}
+
+.text-fisio h4 {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .fisios p{
