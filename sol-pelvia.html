@@ -3,13 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mou-te fisioteràpia</title>
+    <meta name="description" content="Fisioteràpia de sol pelvià especialitzada a Reus. Tractament d'incontinència, prolapse i disfuncions del sòl pelvià. Atenció personalitzada i professional."/>
+    <meta name="keywords" content="fisioteràpia sol pelvià Reus, incontinència, prolapse, sòl pelvià, rehabilitació pelviana, Mou-te Fisioteràpia"/>
+    <title>Fisioteràpia de Sòl Pelvià a Reus | Tractament especialitzat | Mou-te Fisioteràpia a Reus</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" type="image/png" href="/assets/images/logo.png">
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9BYEQVVM0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L9BYEQVVM0');
+  </script>
   <body class="sol-pelvia">
     <div class="nav-bar">
       <div class="nav-bar-1">
@@ -23,7 +34,6 @@
             <ul class="dropdown-menu">
               <li><a href="fisioterapia.html">Fisioteràpia</a></li>
               <li><a href="fisioterapia-esportiva.html">Fisioteràpia Esportiva</a></li>
-              <li><a href="salut-gent-gran.html">Salut Gent Gran</a></li>
               <li><a href="ioga-pilates.html">Ioga i Pilates</a></li>
               <li><a href="exercici-terapeutic.html">Grups d'Exercici Terapèutic</a></li>
               <li><a href="sol-pelvia.html">Fisioteràpia de Sol Pelvià</a></li>
@@ -95,7 +105,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.createElement('button');
         menuToggle.className = 'menu-toggle';
-        menuToggle.innerHTML = '☰';
+        menuToggle.innerHTML = '&#9776;';
         document.querySelector('.nav-bar-1').appendChild(menuToggle);
 
         menuToggle.addEventListener('click', function () {
